@@ -1,9 +1,67 @@
 @page
 @model MyWebApp.Pages.SignInModel
 @{
-    ViewData["Title"] = "Sign In";
+  ViewData["Title"] = "Sign In";
 }
 
-<h2>Sign In</h2>
+<style>
+  .form-container {
+    max-width: 400px;
+    margin: 0 auto;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #f2f2f2;
+  }
 
-<!-- Add your sign-in form here -->
+  .form-container h2 {
+    text-align: center;
+    margin-bottom: 20px;
+  }
+
+  .form-container label {
+    display: block;
+    margin-bottom: 10px;
+  }
+
+  .form-container input[type="text"],
+  .form-container input[type="password"] {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+  }
+
+  .form-container button[type="submit"] {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    float: right;
+  }
+
+  .form-container button[type="submit"]:hover {
+    background-color: #45a049;
+  }
+</style>
+
+<div class="form-container">
+  <h2>Sign In</h2>
+
+  <!-- Add your sign-in form here -->
+  <form method="post" class="sign-in-form">
+    <div class="form-group">
+      <label for="username">Username:</label>
+      <input type="text" id="username" name="username" required class="form-control">
+    </div>
+    <div class="form-group">
+      <label for="password">Password:</label>
+      <input type="password" id="password" name="password" required class="form-control">
+    </div>
+    <button type="submit" class="btn btn-primary">Sign In</button>
+  </form>
+</div>
