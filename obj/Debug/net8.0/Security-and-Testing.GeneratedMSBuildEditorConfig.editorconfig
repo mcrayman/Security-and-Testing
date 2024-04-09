@@ -18,12 +18,20 @@ build_property.GenerateRazorMetadataSourceChecksumAttributes =
 build_property.MSBuildProjectDirectory = /Users/matthewmcmeans/Library/CloudStorage/OneDrive-TheUniversityofMemphis/Spring-2024/4432 Secure Coding/Security-and-Testing
 build_property._RazorSourceGeneratorDebug = 
 
+[/Users/matthewmcmeans/Library/CloudStorage/OneDrive-TheUniversityofMemphis/Spring-2024/4432 Secure Coding/Security-and-Testing/Pages/Blog.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXMvQmxvZy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
 [/Users/matthewmcmeans/Library/CloudStorage/OneDrive-TheUniversityofMemphis/Spring-2024/4432 Secure Coding/Security-and-Testing/Pages/Error.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXMvRXJyb3IuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
 [/Users/matthewmcmeans/Library/CloudStorage/OneDrive-TheUniversityofMemphis/Spring-2024/4432 Secure Coding/Security-and-Testing/Pages/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXMvSW5kZXguY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/matthewmcmeans/Library/CloudStorage/OneDrive-TheUniversityofMemphis/Spring-2024/4432 Secure Coding/Security-and-Testing/Pages/NewBlog.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXMvTmV3QmxvZy5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
 [/Users/matthewmcmeans/Library/CloudStorage/OneDrive-TheUniversityofMemphis/Spring-2024/4432 Secure Coding/Security-and-Testing/Pages/Privacy.cshtml]
