@@ -97,3 +97,7 @@
         <button type="submit" class="btn btn-primary">Sign In</button>
     </form>
 </div>
+@if (ViewData["IsLoggedIn"] != null)
+{
+  HttpContext.Session.SetString("IsLoggedIn", "true");
+}

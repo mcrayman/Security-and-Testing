@@ -17,7 +17,8 @@ namespace MyWebApp.Pages
 
     // Assuming user registration logic here
 
-    return RedirectToPage("/NewBlog"); // Redirect to NewBlog page
+    return RedirectToPage("/Home");
+
 }
 
     }
