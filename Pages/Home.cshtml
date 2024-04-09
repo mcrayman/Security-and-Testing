@@ -1,0 +1,23 @@
+@page
+@model IndexModel
+@{
+  ViewData["Title"] = "Home";
+}
+<div style="text-align: center; display: flex; justify-content: center; align-items: center">
+  <div style="text-align: center; margin: 100px">
+    <div class="card-deck">
+      <div class="card" style="padding: 40px; margin-bottom: 60px">
+        <div class="card-body">
+          <h5 class="card-title">Create a New Blog</h5>
+          <a asp-page="/NewBlog" class="btn btn-primary btn-lg">Go to New Blog</a>
+        </div>
+      </div>
+      <div class="card" style="padding: 40px">
+        <div class="card-body">
+          <h5 class="card-title">View your blogs</h5>
+          <a asp-page="/Blog" class="btn btn-primary btn-lg">Go to Blogs</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
