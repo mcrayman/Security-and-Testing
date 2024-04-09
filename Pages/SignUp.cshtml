@@ -1,71 +1,111 @@
 @page
 @model MyWebApp.Pages.SignUpModel
 @{
-  ViewData["Title"] = "Sign Up";
+    ViewData["Title"] = "Sign Up";
 }
 
 <style>
-  .form-container {
-    max-width: 400px;
-    margin: 0 auto;
-    padding: 20px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    background-color: #f2f2f2;
-  }
+    .form-container {
+        max-width: 400px;
+        margin: 0 auto;
+        padding: 20px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        background-color: #f2f2f2;
+    }
 
-  .form-container h2 {
-    text-align: center;
-    margin-bottom: 20px;
-  }
+    .form-container h2 {
+        text-align: center;
+        margin-bottom: 20px;
+    }
 
-  .form-container label {
-    display: block;
-    margin-bottom: 10px;
-  }
+    .form-container label {
+        display: block;
+        margin-bottom: 10px;
+    }
 
-  .form-container input[type="text"],
-  .form-container input[type="password"] {
-    width: 100%;
-    padding: 10px;
-    margin-bottom: 20px;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-    box-sizing: border-box;
-  }
+    .form-container input[type="text"],
+    .form-container input[type="password"] {
+        width: 100%;
+        padding: 10px;
+        margin-bottom: 20px;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        box-sizing: border-box;
+    }
 
-  .form-container button[type="submit"] {
-    background-color: #4CAF50;
-    color: white;
-    padding: 10px 20px;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
-    float: right;
-  }
+    .form-container button[type="submit"] {
+        background-color: #4CAF50;
+        color: white;
+        padding: 10px 20px;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+        float: right;
+    }
 
-  .form-container button[type="submit"]:hover {
-    background-color: #45a049;
-  }
+    .form-container button[type="submit"]:hover {
+        background-color: #45a049;
+    }
+
+    /* Styling for validation error messages */
+    .error {
+        color: red;
+        margin-bottom: 15px;
+    }
 </style>
 
-<div class="form-container">
-  <h2>Sign Up</h2>
+<script>
+    function validateSignUpForm() {
+        var username = document.getElementById("username").value.trim();
+        var password = document.getElementById("password").value;
+        var confirmPassword = document.getElementById("confirmPassword").value;
+        var valid = true;
 
-  <!-- Add your sign-up form here -->
-  <form method="post">
-    <div>
-      <label for="username">Username:</label>
-      <input type="text" id="username" name="username" required>
-    </div>
-    <div>
-      <label for="password">Password:</label>
-      <input type="password" id="password" name="password" required>
-    </div>
-    <div>
-      <label for="confirmPassword">Confirm Password:</label>
-      <input type="password" id="confirmPassword" name="confirmPassword" required>
-    </div>
-    <button type="submit">Sign Up</button>
-  </form>
+        // Check if username is empty
+        if (username === "") {
+            alert("Username is required.");
+            valid = false;
+        }
+
+        // Check if password is empty
+        if (password === "") {
+            alert("Password is required.");
+            valid = false;
+        }
+
+        // Check if confirmPassword is empty
+        if (confirmPassword === "") {
+            alert("Confirming your password is required.");
+            valid = false;
+        }
+
+        // Check if passwords match
+        if (password !== confirmPassword) {
+            alert("Passwords do not match.");
+            valid = false;
+        }
+
+        return valid; // Return false if any condition is not met
+    }
+</script>
+
+<div class="form-container">
+    <h2>Sign Up</h2>
+
+    <form method="post" onsubmit="return validateSignUpForm()">
+        <div>
+            <label for="username">Username:</label>
+            <input type="text" id="username" name="username" required>
+        </div>
+        <div>
+            <label for="password">Password:</label>
+            <input type="password" id="password" name="password" required>
+        </div>
+        <div>
+            <label for="confirmPassword">Confirm Password:</label>
+            <input type="password" id="confirmPassword" name="confirmPassword" required>
+        </div>
+        <button type="submit">Sign Up</button>
+    </form>
 </div>
