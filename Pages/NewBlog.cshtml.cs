@@ -22,6 +22,13 @@ namespace MyWebApp.Pages
                 return Page();
             }
 
+            // Validate input
+            if (string.IsNullOrEmpty(Title) || string.IsNullOrEmpty(Content) || Image == null)
+            {
+                ModelState.AddModelError(string.Empty, "Please fill in all the required fields.");
+                return Page();
+            }
+
             var imagePath = Path.Combine("images", Image.FileName);
             var absoluteImagePath = Path.Combine(Directory.GetCurrentDirectory(), "wwwroot", imagePath);
 

@@ -94,6 +94,7 @@
     <h2>Sign Up</h2>
 
     <form method="post" onsubmit="return validateSignUpForm()">
+        @Html.AntiForgeryToken()
         <div>
             <label for="username">Username:</label>
             <input type="text" id="username" name="username" required>

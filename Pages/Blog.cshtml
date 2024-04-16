@@ -1,26 +1,26 @@
 @page
 @model MyWebApp.Pages.BlogModel
 @{
-    ViewData["Title"] = "Blog";
+  ViewData["Title"] = "Blog";
 }
 
 <div class="container">
   <div class="row">
-    @foreach (var post in Model.Posts)
-    {
-      <div class="col-md-3">
-        <div class="card mb-4">
-          @if (!string.IsNullOrEmpty(post.ImagePath))
-          {
-            var fileName = post.ImagePath.Split('/').Last();
-            <img src="@Url.Content($"~/images/{fileName}")" alt="Blog Image" class="card-img-top" style="height: 300px; width: 300px;">
-          }
-          <div class="card-body">
-            <h5 class="card-title">@post.Title</h5>
-            <p class="card-text">@post.Content</p>
-          </div>
-        </div>
+  @foreach (var post in Model.Posts)
+  {
+    <div class="col-md-3">
+    <div class="card mb-4">
+      @if (!string.IsNullOrEmpty(post.ImagePath))
+      {
+      var fileName = post.ImagePath.Split('/').Last();
+      <img src="@Url.Content($"~/images/{fileName}")" alt="Blog Image" class="card-img-top" style="height: 300px; width: 300px;">
+      }
+      <div class="card-body">
+      <h5 class="card-title">@Html.Encode(post.Title)</h5>
+      <p class="card-text">@Html.Encode(post.Content)</p>
       </div>
-    }
+    </div>
+    </div>
+  }
   </div>
 </div>

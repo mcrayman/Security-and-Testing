@@ -84,6 +84,7 @@
     <h2>Sign In</h2>
 
     <form method="post" class="sign-in-form" onsubmit="return validateForm()">
+        @Html.AntiForgeryToken()
         <div class="form-group">
             <label for="username">Username:</label>
             <input type="text" id="username" name="username" required class="form-control">
@@ -99,5 +100,5 @@
 </div>
 @if (ViewData["IsLoggedIn"] != null)
 {
-  HttpContext.Session.SetString("IsLoggedIn", "true");
+    HttpContext.Session.SetString("IsLoggedIn", "true");
 }
